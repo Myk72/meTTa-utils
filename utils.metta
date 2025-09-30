@@ -698,23 +698,23 @@
 ))
 
 
-;; Function: bitShiftLeft
+;; Function: <<
 ;; Description: Performs a bitwise left shift operation on a number.
 ;; Parameters:
 ;;   - $num: The number to be shifted.
 ;;   - $shift: The number of positions to shift the bits to the left.
 ;; Returns:
 ;;   - The result of the bitwise left shift operation.
-(: bitShiftLeft (-> Number Number Number))
-(= (bitShiftLeft $num $shift) (* $num (pow-math 2 $shift)))
+(: << (-> Number Number Number))
+(= (<< $num $shift) (* $num (pow-math 2 $shift)))
 
 
-;; Function: bitShiftRight
+;; Function: >>
 ;; Description: Performs a bitwise right shift operation on a number.
 ;; Parameters:
 ;;   - $num: The number to be shifted.
 ;;   - $shift: The number of positions to shift the bits to the right.
 ;; Returns:
 ;;   - The result of the bitwise right shift operation.
-(: bitShiftRight (-> Number Number Number))
-(= (bitShiftRight $num $shift) (floor-math (/ $num (pow-math 2 $shift))))
+(: >> (-> Number Number Number))
+(= (>> $num $shift) (floor-math (/ $num (pow-math 2 $shift))))
