@@ -175,3 +175,7 @@
 ;Test sort function
 !(assertEqual (sort (1 2 3 0 10) dec) (10 3 2 1 0))
 !(assertEqual (sort (1 2 3 0 10) ()) (0 1 2 3 10))
+
+; Test bit-shift functions (bitShiftLeft and bitShiftRight)
+!(assertEqual (bitShiftLeft 2 4) 32)
+!(assertEqual (bitShiftRight 64 4) 4)
